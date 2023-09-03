@@ -1,0 +1,69 @@
+@use "./breakpoints.scss";
+
+@mixin btn-style($height, $width, $border-radius) {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #00abf0;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+
+  height: $height;
+  width: $width;
+  border-radius: $border-radius;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    color: #081b29;
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+@mixin start-animation($animation-delay) {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #081b29;
+  animation: showRight 1s ease forwards;
+  animation-delay: $animation-delay;
+  z-index: 2;
+}
+
+@mixin phone {
+  @media only screen and (max-width: breakpoints.$sm) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: breakpoints.$md) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: breakpoints.$md + 1px) {
+    @content;
+  }
+}

@@ -1,0 +1,255 @@
+@use "./partials/mixins.scss";
+@use "./partials/breakpoints.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
+
+body {
+  color: #ededed;
+  background: #081b29;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: #081b29;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+  &_logo {
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+
+    &--home::before {
+      @include mixins.start-animation(0.4s);
+    }
+  }
+}
+
+.nav {
+  @include mixins.tablet {
+    display: none;
+  }
+  & a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #00abf0;
+    }
+  }
+}
+
+.active {
+  color: #00abf0;
+}
+
+.home {
+  height: 100vh;
+  background: #081b29;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  margin-top: 100px;
+
+  &_content {
+    max-width: 800px;
+    &_h1 {
+      position: relative;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.2;
+      &::before {
+        @include mixins.start-animation(1s);
+      }
+      @include mixins.tablet {
+        font-size: 33px;
+        transition: font-size 0.5s ease;
+      }
+    }
+    &_h3 {
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      color: #00abf0;
+
+      @include mixins.tablet {
+        font-size: 20px;
+        transition: font-size 0.5s ease;
+      }
+
+      &::before {
+        @include mixins.start-animation(1.3s);
+      }
+      &--white {
+        color: #ededed;
+        &::before {
+          @include mixins.start-animation(0.4s);
+        }
+      }
+    }
+    & p {
+      position: relative;
+      font-size: 16px;
+      margin: 20px 0 40px;
+
+      &::before {
+        @include mixins.start-animation(1.6s);
+      }
+    }
+  }
+}
+
+.btn-box {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+
+  &::before {
+    @include mixins.start-animation(1.9s);
+  }
+}
+
+.btn {
+  @include mixins.btn-style(100%, 150px, 8px);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  bottom: 0;
+  left: 0;
+  padding: 20px 10%;
+  height: 100px;
+  width: 100%;
+  background: #081b29;
+  z-index: 5;
+  &--home::before {
+    @include mixins.start-animation(2.5s);
+  }
+
+  & a {
+    @include mixins.btn-style(40px, 40px, 50%);
+  }
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes manipActiveHover {
+  100% {
+    pointer-events: auto;
+  }
+}
+
+#check {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  width: 35px;
+  cursor: pointer;
+
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+
+  @include mixins.desktop {
+    display: none;
+  }
+
+  & .bar,
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+
+  &.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  &.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+  &.is-active .bar {
+    opacity: 0;
+  }
+}
+
+.mobile-nav {
+  opacity: 90%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  background-color: #081b29;
+  z-index: 2;
+  padding-top: 120px;
+  transition: 0.4s;
+
+  @include mixins.desktop {
+    display: none;
+  }
+
+  &.is-active {
+    left: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: #0b2030;
+
+    color: #ededed;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #0f283b;
+    }
+  }
+}
