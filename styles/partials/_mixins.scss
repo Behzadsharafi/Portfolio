@@ -43,27 +43,120 @@
   top: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   background: #081b29;
   animation: showRight 1s ease forwards;
   animation-delay: $animation-delay;
   z-index: 2;
 }
 
+@mixin typewriter-animation(
+  $steps,
+  $duration,
+  $typeDelay,
+  $blinkDelay,
+  $blinkTime,
+  $blinkMode
+) {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  &::before {
+    background: #081b29;
+    animation: typewriter $duration steps($steps) $typeDelay forwards;
+  }
+
+  &::after {
+    width: 0.125em;
+    background: transparent;
+    animation: typewriter $duration steps($steps) $typeDelay forwards,
+      blink $blinkTime steps($steps) $blinkDelay $blinkMode;
+  }
+
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes blink {
+    0% {
+      background: transparent;
+    }
+    50% {
+      background: #ededed;
+    }
+    100% {
+      background: transparent;
+    }
+  }
+}
+
+//428px and smaller
+@mixin phone_xsm {
+  @media only screen and (max-width: breakpoints.$xxs) {
+    @content;
+  }
+}
+@mixin phone_sm {
+  @media only screen and (max-width: breakpoints.$xs) {
+    @content;
+  }
+}
+
+//576px and smaller
 @mixin phone {
   @media only screen and (max-width: breakpoints.$sm) {
     @content;
   }
 }
 
+//768px and smaller
 @mixin tablet {
   @media only screen and (max-width: breakpoints.$md) {
     @content;
   }
 }
 
-@mixin desktop {
-  @media only screen and (min-width: breakpoints.$md + 1px) {
+//992px and smaller
+@mixin desktop_sm {
+  @media only screen and (max-width: breakpoints.$lg) {
+    @content;
+  }
+}
+
+//1200px and smaller
+@mixin desktop_md {
+  @media only screen and (max-width: breakpoints.$xl) {
+    @content;
+  }
+}
+
+//1400px and smaller
+@mixin desktop_lg {
+  @media only screen and (max-width: breakpoints.$xxl) {
+    @content;
+  }
+}
+
+//1700px and smaller
+@mixin desktop_xl {
+  @media only screen and (max-width: breakpoints.$xxxl) {
+    @content;
+  }
+}
+
+//1700px and larger
+@mixin desktop_xxl {
+  @media only screen and (min-width: (breakpoints.$xxxl + 1px)) {
+    //  placeholder for actual values
     @content;
   }
 }

@@ -9,20 +9,29 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inclusive+Sans:ital@1&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mooli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;400&family=Skranji:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/323b842a50.js"
       crossorigin="anonymous"
     ></script>
     <script src="../js/index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/323b842a50.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
   <body>
     <header class="header">
-      <a href="#" class="header_logo"> ZAD.</a>
+      <a href="./index.html" class="header_logo"> ZAD.</a>
       <nav class="nav">
         <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
-        <a href="./skills.html">Tech Skills</a>
         <a href="./projects.html">Projects</a>
+        <a href="./contact.html">Contact</a>
       </nav>
       <button class="hamburger">
         <div class="bar"></div>
@@ -32,40 +41,215 @@
     <nav class="mobile-nav">
       <a href="./index.html">Home</a>
       <a href="./about.html">About</a>
-      <a href="./skills.html">Tech Skills</a>
       <a href="./projects.html">Projects</a>
+      <a href="./contact.html">Contact</a>
     </nav>
 
-    <section class="home">
-      <div class="home_content">
-        <h1 class="home_content_h1">About Me</h1>
+    <main class="about">
+      <div class="about__content">
+        <h1 class="about__content__heading">About Me</h1>
 
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est placeat
-          minima itaque sequi corrupti molestias incidunt perspiciatis Lorem,
-          ipsum dolor sit amet consectetur adipisicing elit. Est placeat minima
-          itaque sequi corrupti molestias incidunt perspiciatis Lorem, ipsum
-          dolor sit amet consectetur adipisicing elit. Est placeat minima itaque
-          sequi corrupti molestias incidunt perspiciatis Lorem, ipsum dolor sit
-          amet consectetur adipisicing elit. Est placeat minima itaque sequi
-          corrupti molestias incidunt perspiciatis Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Est placeat minima itaque sequi corrupti
-          molestias incidunt perspiciatis Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Est pl
+        <p class="about__content__paragraph">
+          I’m Zad Sharafi, a tech enthusiast and a computer science graduate
+          with robust skill set in web development tools such as JavaScript,
+          React.JS, HTML, CSS/SCSS and Java. I have always known myself as
+          someone who has a commitment to constant and never-ending improvement
+          and this part of my personality has drawn me towards software
+          development. Acquiring solid foundation in various aspects of software
+          engineering in university, and solidifying this knowledge through
+          _nology full-stack development bootcamp has made me eager to continue
+          my journey in tech stronger and make a better version of myself
+          day-by-day.
         </p>
-      </div>
 
-      <div class="footer">
-        <a href="https://github.com/Behzadsharafi/"
-          ><i class="bx bxl-github"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/zadsharafi/"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
-        <a href="mailto:behzadsharafi@gmail.com"
-          ><i class="bx bxl-gmail"></i
-        ></a>
+        <section class="about__content__info">
+          <div class="about__content__info__tabs">
+            <p
+              class="about__content__info__tabs__title about__content__info__tabs__title--active"
+            >
+              Skills
+            </p>
+            <p class="about__content__info__tabs__title">Experience</p>
+            <p class="about__content__info__tabs__title">Education</p>
+          </div>
+          <div
+            class="about__content__info__details about__content__info__details about__content__info__details--active"
+            id="Skills"
+          >
+            <ul class="list">
+              <li class="list__item">
+                <p class="list__item__title">Languages</p>
+                <div class="list__item__content list__item__content--row">
+                  <div class="list__item__content__section">
+                    <img src="../images/JavaScript.svg" alt="" />
+                    <h3>JavaScript</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/HTML.svg" alt="" />
+                    <h3>HTML</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/CSS.svg" alt="" />
+                    <h3>CSS</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/TypeScript.svg" alt="" />
+                    <h3>TypeScript</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/Java.svg" alt="" />
+                    <h3>Java</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item">
+                <p class="list__item__title">Frontend</p>
+                <div class="list__item__content list__item__content--row">
+                  <div class="list__item__content__section">
+                    <img src="../images/React.svg" alt="" />
+                    <h3>ReactJS</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/Sass.svg" alt="" />
+                    <h3>Sass</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item">
+                <p class="list__item__title">Backend</p>
+                <div class="list__item__content list__item__content--row">
+                  <div class="list__item__content__section">
+                    <img src="../images/NestJS.svg" alt="" />
+                    <h3>NestJS</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/Spring.svg" alt="" />
+                    <h3>Spring</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item">
+                <p class="list__item__title">Database & Cloud</p>
+                <div class="list__item__content list__item__content--row">
+                  <div class="list__item__content__section">
+                    <img src="../images/MySQL.svg" alt="" />
+                    <h3>MySQL</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/Firebase.svg" alt="" />
+                    <h3>Firebase</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item">
+                <p class="list__item__title">Testing</p>
+                <div class="list__item__content list__item__content--row">
+                  <div class="list__item__content__section">
+                    <img src="../images/Jest.svg" alt="" />
+                    <h3>Jest</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/JUnit.svg" alt="" />
+                    <h3>JUnit</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/ReactTestingLibrary.svg" alt="" />
+                    <h3>React Testing Library</h3>
+                  </div>
+                </div>
+              </li>
+              <li class="list__item">
+                <p class="list__item__title">Version Control</p>
+                <div class="list__item__content list__item__content--row">
+                  <div class="list__item__content__section">
+                    <img src="../images/Git.svg" alt="" />
+                    <h3>Git</h3>
+                  </div>
+                  <div class="list__item__content__section">
+                    <img src="../images/GitHub.svg" alt="" />
+                    <h3>GitHub</h3>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="about__content__info__details" id="Experience">
+            <ul class="list">
+              <li class="list__item">
+                <p class="list__item__title">2023-Current</p>
+                <div class="list__item__content">
+                  <div class="list__item__content__section">
+                    <img src="../images/_nology.PNG" alt="" />
+                    <h3>_nology</h3>
+                  </div>
+                  <p class="list__item__content__section">
+                    Full-stack web development bootcamp along with working on
+                    new features for a student metrics application. The app
+                    tracks student performance, assessment results, and project
+                    feedback. Stack: MySQL, & NestJS on the backend & TypeScript
+                    and React on the frontend.
+                  </p>
+                </div>
+              </li>
+              <li class="list__item">
+                <p class="list__item__title">2022-2023</p>
+                <div class="list__item__content">
+                  <div class="list__item__content__section">
+                    <img src="../images/Digikala.png" alt="" />
+                    <h3>Digikala</h3>
+                  </div>
+                  <p class="list__item__content__section">
+                    During my time at Digikala my tasks included maintaining and
+                    upgrading front end of the website codes mostly in
+                    JavaScript, HTML, and CSS. Working on responsiveness of the
+                    website, collaborating with in-house web designers to
+                    improve UI design and translated user requirements into
+                    implementation plans, and also fixing the bugs and issues
+                    along the way.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="about__content__info__details" id="Education">
+            <ul class="list">
+              <li class="list__item">
+                <p class="list__item__title">2023</p>
+                <div class="list__item__content">
+                  <div class="list__item__content__section">
+                    <img src="../images/_nology.PNG" alt="" />
+                    <h3>_nology</h3>
+                  </div>
+                  <p class="list__item__content__section">
+                    Full-stack web development bootcamp.
+                  </p>
+                </div>
+              </li>
+              <li class="list__item">
+                <p class="list__item__title">2017-2021</p>
+                <div class="list__item__content">
+                  <div class="list__item__content__section">
+                    <img src="../images/KNTUniversity.png" alt="" />
+                    <h3>KNT University of Technology</h3>
+                  </div>
+                  <p class="list__item__content__section">
+                    Bachelor of Software Engineering
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
-    </section>
+    </main>
+    <footer class="footer">
+      <a href="https://github.com/Behzadsharafi/"
+        ><i class="bx bxl-github"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/zadsharafi/"
+        ><i class="bx bxl-linkedin"></i
+      ></a>
+      <a href="mailto:behzadsharafi@gmail.com"><i class="bx bxl-gmail"></i></a>
+    </footer>
   </body>
 </html>

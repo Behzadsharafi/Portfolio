@@ -9,20 +9,26 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inclusive+Sans:ital@1&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mooli&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;400&family=Skranji:wght@400;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-
+    <script
+      src="https://kit.fontawesome.com/323b842a50.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/323b842a50.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
   <body>
     <header class="header">
-      <a href="./index.html" class="header_logo header_logo--home"> ZAD.</a>
+      <a href="./index.html" class="header_logo"> ZAD.</a>
       <nav class="nav">
-        <a href="#">Home</a>
+        <a href="./index.html">Home</a>
         <a href="./about.html">About</a>
         <a href="./projects.html">Projects</a>
         <a href="./contact.html">Contact</a>
@@ -39,15 +45,45 @@
       <a href="./contact.html">Contact</a>
     </nav>
 
-    <section class="main">
-      <div class="main__content">
-        <h1 class="main__content__heading">Hello there! <br /></h1>
-        <p class="main__content__para1">My name is Zad Sharafi</p>
-        <p class="main__content__para2">I am a Software Engineer</p>
-        <p class="main__content__para3">Welcome to my website!</p>
+    <main class="contact">
+      <div class="contact__content">
+        <section class="contact__content__details">
+          <div class="contact__content__details__left">
+            <h1 class="contact__content__details__left__heading">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>Behzadsharafi@gmail.com
+            </p>
+            <p>
+              <i class="fa-brands fa-linkedin"></i>linkedin.com/in/zadsharafi/
+            </p>
+            <p><i class="fa-brands fa-github"></i>github.com/Behzadsharafi</p>
+          </div>
+          <div class="contact__content__details__right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="name" placeholder="Your Name" />
+              <input
+                type="text"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="message"
+                cols="30"
+                rows="6"
+                placeholder="Your Message..."
+              ></textarea>
+              <button type="submit">Submit</button>
+              <span
+                class="contact__content__details__right__msg"
+                id="msg"
+              ></span>
+            </form>
+          </div>
+        </section>
       </div>
-    </section>
-    <div class="footer footer--home">
+    </main>
+    <footer class="footer">
       <a href="https://github.com/Behzadsharafi/"
         ><i class="bx bxl-github"></i
       ></a>
@@ -55,6 +91,6 @@
         ><i class="bx bxl-linkedin"></i
       ></a>
       <a href="mailto:behzadsharafi@gmail.com"><i class="bx bxl-gmail"></i></a>
-    </div>
+    </footer>
   </body>
 </html>
