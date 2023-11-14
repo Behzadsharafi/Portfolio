@@ -623,9 +623,12 @@ body {
           margin-bottom: 20px;
         }
 
-        & p {
+        & a {
+          display: flex;
+          color: white;
+          text-decoration: none;
           & i {
-            margin-right: 15px;
+            margin-right: 5px;
             font-size: 25px;
           }
         }

@@ -759,8 +759,13 @@ body {
   font-size: 40px;
   margin-bottom: 20px;
 }
-.contact__content__details__left p i {
-  margin-right: 15px;
+.contact__content__details__left a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+}
+.contact__content__details__left a i {
+  margin-right: 5px;
   font-size: 25px;
 }
 .contact__content__details__right {
