@@ -6,8 +6,8 @@ Welcome to my portfolio. Here, you'll discover a collection of my work, projects
 
 ## Purpose
 
-- Showcase my web development skills.
-- Provide a link to the other projects I have recently finished.
+- Showcasing my web development skills.
+- Providing a link to the other projects I have recently finished.
 
 ## Build Steps
 
